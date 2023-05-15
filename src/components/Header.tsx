@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import React from 'react'
 import { MagnifyingGlassIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/24/solid'
-import { faker } from '@faker-js/faker'
+import minifaker from 'minifaker'
 
 export default function Header() {
   return (
@@ -37,7 +36,7 @@ export default function Header() {
         <div className='flex space-x-4 items-center'>
           <HomeIcon className='hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out' />
           <PlusCircleIcon className='h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out' />
-          <Image src={faker.image.avatar()} alt="username" width={'42'} height={'42'} className='rounded-full cursor-pointer' />
+          <Image src={minifaker.imageUrlFromPlaceIMG({width: 42, height: 42})} alt="username" width={'42'} height={'42'} className='rounded-full cursor-pointer' />
         </div>
       </div>
     </div>

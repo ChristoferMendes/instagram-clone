@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet corrupti quis praesentium enim? Iusto fuga consectetur officia, enim alias ad numquam natus dolorem? Laboriosam repellendus ratione accusantium officiis quo.</p>
-        {children}
+        <div className='bg-gray-50 min-h-screen'>
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   )
