@@ -1,4 +1,10 @@
-import { EllipsisHorizontalIcon, HeartIcon, BookmarkIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/outline'
+import {
+  EllipsisHorizontalIcon,
+  HeartIcon,
+  BookmarkIcon,
+  ChatBubbleLeftIcon,
+  FaceSmileIcon
+} from '@heroicons/react/24/outline'
 
 export default function Post({ username, userImg, id, img, caption }: {
   username: string,
@@ -24,6 +30,18 @@ export default function Post({ username, userImg, id, img, caption }: {
         </div>
         <BookmarkIcon className={'post-icon'} />
       </div>
+
+      <p className={'p-5 truncate'}>
+        <span className={'font-bold mr-2'}>{username}</span>
+        {caption}
+      </p>
+
+      <form action="" className={'flex items-center p-4'}>
+        <FaceSmileIcon className={'h-6'} />
+        <input className={'border-none flex-1 focus:ring-0'} type="text" name="" id=""
+               placeholder={'Enter your comment...'} />
+        <button className={'text-blue-400 font-bold select-none'}>Post</button>
+      </form>
     </div>
   )
 }
