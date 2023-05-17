@@ -4,7 +4,7 @@ import Posts from "@/components/Posts";
 export default function Feed() {
   return (
     <>
-      <section>
+      <section className={'md:col-span-2'}>
         <Stories />
 
         <Posts />

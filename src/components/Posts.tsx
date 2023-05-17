@@ -18,7 +18,7 @@ const genPost = () => {
       id: minifaker.uuid.v4(),
       username: minifaker.name({ locale: 'en' }),
       userImg: `https://i.pravatar.cc/150?img=${randomNumber},`,
-      img: minifaker.imageUrlFromPlaceholder({ width: 200, height: 200 }),
+      img: minifaker.imageUrlFromPlaceholder({ width: 1200, height: 1200 }),
       caption: `Nice capture. This is the picture number ${i}`
     }
   })
