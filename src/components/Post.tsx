@@ -1,4 +1,4 @@
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
+import { EllipsisHorizontalIcon, HeartIcon, BookmarkIcon, ChatBubbleLeftIcon } from '@heroicons/react/24/outline'
 
 export default function Post({ username, userImg, id, img, caption }: {
   username: string,
@@ -16,6 +16,14 @@ export default function Post({ username, userImg, id, img, caption }: {
       </div>
 
       <img src={img} alt="" className="object-cover w-full" />
+
+      <div className={'flex justify-between px-4 pt-4'}>
+        <div className={'flex space-x-4'}>
+          <HeartIcon className={'post-icon'} />
+          <ChatBubbleLeftIcon className={'post-icon'} />
+        </div>
+        <BookmarkIcon className={'post-icon'} />
+      </div>
     </div>
   )
 }
